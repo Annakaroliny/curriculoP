@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currículo</title>
+    <link rel="stylesheet" href="soul.css" type="text/css">
+</head>
+<body>
+    </head>
+    <body>
+        <div id="dados">
+        <div class="container">
+            <div class="informacoes"> 
+                <div class="texto">
+                    <div class="foto">
+                        <img src="IMG_0287.JPG">
+                    </div>
+                    <h2>Anna Karoliny<br><span>SALESFORCE DEVELOPER</span></h2>
+                </div>
+
+                <div class="contato">
+                    <h3 class="titulo">Contato</h3>
+                    <ul>
+                        <li>
+                            <div class="what">
+                                <a href="https://api.whatsapp.com/send?phone=5538997272477&text=Oii%20aqui%20%C3%A9%20a%20Anna%2C%20j%C3%A1%20j%C3%A1%20te%20respondo!!!" 
+                            target="_blank" rel="External">
+                            <img id="logoWat" src="wh.png" target="_blank" rel="External"></a> 
+                            (38) 99727-2477
+                        </div>
+                    </li>
+                        <li>
+                            <div class="email">
+                                <a href="mailto:carolina.anna55@outlook.com" 
+                            target="_blank" rel="External">
+                                <img  id="logoEmail" src="email.png"></a> 
+                             carolina.anna55@outlook.com 
+                            </div>
+                        </li>
+                        <li>
+                            <div class="link">
+                                <a href="https://www.linkedin.com/in/anna-karoliny-devsalesforce/" 
+                            target="_blank" rel="External">
+                            <img id="logoLink" src="linke.JPG" target="_blank" rel="External"></a>
+                            www.linkedin.com/in/anna-karoliny-devsalesforce
+                            </div>
+                    </li>
+                        <li>
+                            <div class="git">
+                                <a href="https://github.com/Annakaroliny" 
+                            target="_blank" rel="External">
+                            <img id="logoGit" src="GitHub-Logo.png" target="_blank" rel="External"></a>
+                            github.com/Annakaroliny
+                        </div>
+                    </li>
+                        <li>
+                            <div class="trail">
+                                <a href="https://trailblazer.me/id/anna-karoliny-devsalesforce" 
+                            target="_blank" rel="External">
+                            <img id="trailhead" src="trailhead-logo.svg" target="_blank" rel="External"></a>
+                            trailblazer.me/id/anna-karoliny-devsalesforce
+                        </div>
+                    </li>
+                        
+                    </ul>
+                    <br>
+
+                </div>
+
+
+            </div> 
+
+            <div class="right-Side"> 
+                <div class="info">
+                    <h2 class="titulo2">Sobre mim</h2>
+                    <p>
+                        Me chamo Anna Karoliny, tenho 28 anos e sou de Pirapora, MG.<br>
+                        Há quase um ano decidir efetuar a transição de carreira, comecei a <br>
+                        pesquisar e decidir embarcar na área de TI, desde então sigo estudando <br>
+                        e me aprimorando e hoje sou completamente apaixonada, tenho cede por <br>
+                        conhecimento e empenho-me ao máximo para cumprir os novos desafios.<br>
+                    </p>
+                </div>
+                <div class="info">
+                    <h2>Experiência Profissional </h2>
+                    <br>
+  
+                    <h3>Gerente Administrativo</h3>                   
+                    <h4>2017/2022 - Comercial de Calçados Ibotirama</h4>
+                    <br>  
+                    <ul>
+                        <li>Contratação e treinamento de novos funcionários.</li>
+                        <li>Controle de contas a pagar e a receber.</li>
+                        <li>Controle de entrada de mercadorias.</li>
+                        <li>Cadastramento e emissão de notas fiscais de entrada e saída.</li>
+                      </ul>
+                      <h3>Operadora de caixa/Balconista</h3>                      
+                      <h4>2012/2016 - Gilvan Gonçalves</h4> 
+                      <br>
+                      <ul>
+                        <li>Processar e receber pagamento.</li>
+                        <li>Atendimento ao cliente.</li>
+                        <li>Reposição e controlo de estoque.</li>
+                      </ul>
+                </div> 
+                <div class="formacao">
+                    <h2>Formação</h2>
+                    <h4>Soul Code Academy (Em andamento)</h4>
+                    <br>
+                    <ul>
+                      <li>Desenvolvimento back-end com Apex</li>
+                      <li>Administração SalesForce</li>
+                      <li>Front end com HTML, CSS e JavaScript</li>
+                    </ul>
+                    <p><a href="https://soulcodeacademy.org/" 
+                    target="_blank" rel="External">
+                    <img id="imgSoul" src="SoulC.png" target="_blank" rel="External"></a>
+                </p>
+                </div>
+            
+            </div>
+        </div>
+            <p>
+            <input type="button" value="Imprimir"  id="botao" onclick="funcaoPdf()">
+        </p>
+    </body>
+        <script>
+            function funcaoPdf(){
+                var pegarDados = document.getElementById('dados').innerHTML;
+
+                var janela = window.open('','','width=800,heigth=600');
+                janela.document.write('<html><head>');
+                janela.document.write('<title>PDF</title></head>');
+                janela.document.write('<body>');
+                janela.document.write(pegarDados);
+                janela.document.write('</dody></html>');
+                janela.document.close();
+                janela.print();
+            }
+        </script>
+</html>
